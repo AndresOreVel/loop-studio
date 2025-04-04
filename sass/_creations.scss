@@ -1,0 +1,144 @@
+@use 'variables';
+@use 'mixins';
+
+.creations{
+    position: relative;
+    padding: variables.$normalPadding;
+}
+
+.creations__container{
+    max-width: 69.68rem;
+}
+
+.creations__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    margin-bottom: 1.875rem;
+}
+
+.creations__title{
+    font-weight: 500;
+    font-size: 2.1rem;
+}
+
+.onlyDesktop{
+    border: none;
+    cursor: pointer;
+    position: relative;
+    letter-spacing: .125rem;
+    border: solid 0.063rem #000;
+    text-transform: uppercase;
+    padding: .4375rem 1.875rem;
+    background-color: transparent;
+    color: #000;
+    transition: all .3s ease-in-out;
+}
+
+.onlyDesktop:hover{
+    background-color: #000;
+    color: variables.$white;
+}
+
+.creations__grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(12.5rem, 1fr));
+    gap: 1.875rem;
+    position: relative;
+}
+
+.creations__grid__item{
+    position: relative;
+    height: 20.75rem;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: .25rem;
+    box-shadow: 0 0.3125rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.6);
+}
+
+.creations__grid__item__text{
+    font-weight: 100;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    max-width: 45%;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: variables.$white;
+    z-index: 1;
+}
+
+@include mixins.breakpoint-down(mobile){
+
+    .creations{
+        padding: 0;
+    }
+
+    .creations__container{
+        max-width: 40.9375rem;
+        padding: 2.5rem 1.5rem;
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    .creations__header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .creations__grid{
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+    }
+
+    .creations__grid__item{
+        width: 100%;
+        height: 7.5rem;
+    }
+
+    .onlyDesktop{
+        position: absolute;
+        bottom: -1.5rem;
+    }
+}
+
+$images: (
+    deep-earth: "image-deep-earth.jpg",
+    night-arcade: "image-night-arcade.jpg",
+    soccer-team: "image-soccer-team.jpg",
+    grid: "image-grid.jpg",
+    from-above: "image-from-above.jpg",
+    pocket-borealis: "image-pocket-borealis.jpg",
+    curiosity: "image-curiosity.jpg",
+    fisheye: "image-fisheye.jpg"
+);
+
+@each $class, $image in $images{
+    .#{$class}::before{
+        content: "";
+        background-image: url(../images/desktop/#{$image});
+        background-repeat: no-repeat;
+        transition: filter 0.3s ease;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .#{$class}:hover::before{
+        filter: blur(0.75rem);
+    }
+}
+
+@include mixins.breakpoint-down(mobile) {
+    @each $class, $image in $images {
+        .#{$class}::before {
+            background-image: url(../images/mobile/#{$image});
+            transition: filter 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

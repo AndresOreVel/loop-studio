@@ -1,0 +1,15 @@
+
+// @import url('https://fonts.google.com/specimen/Alata');
+// @import url('https://fonts.google.com/specimen/Josefin+Sans');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body{
+    min-height: 100svh;
+}

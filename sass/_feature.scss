@@ -1,0 +1,80 @@
+@use 'variables';
+@use 'mixins';
+
+
+.feature{
+    position: relative;
+    padding: variables.$normalPadding;
+}
+
+.feature__container{
+    position: relative;
+    max-width: 69.68rem;
+}
+
+.feature__image{
+    position: relative;
+    max-width: 45.625rem;
+    min-height: 31.25rem;
+    background-image: url(../images/desktop/image-interactive.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mixins.breakpoint-down(mobile){
+        background-image: url(../images/mobile/image-interactive.jpg);
+        width: 100%;
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.feature__description{
+    padding: 4rem;
+    position: absolute;
+    right: -5rem;
+    top: 50%;
+    max-width: 32.5rem;
+    background-color: variables.$white;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature__description__title{
+    padding: .5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.feature__description__text{
+    padding: .5rem;
+    word-spacing: .25rem;
+    color: variables.$darkGray;
+}
+
+@include mixins.breakpoint-down(mobile){
+
+    .feature{
+        padding: 0;
+    }
+
+    .feature__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 40.9375rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .feature__image{
+        position: relative;
+        max-width: 100%;
+    }
+
+    .feature__description{
+        position: static;
+        padding: 2rem .8rem;
+    }
+}

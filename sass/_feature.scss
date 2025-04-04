@@ -33,7 +33,7 @@
     padding: 4rem;
     position: absolute;
     right: -5rem;
-    top: 50%;
+    top: 42%;
     max-width: 32.5rem;
     background-color: variables.$white;
     display: flex;
@@ -45,12 +45,14 @@
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
+    font-family: variables.$josefinFont;
 }
 
 .feature__description__text{
     padding: .5rem;
     word-spacing: .25rem;
     color: variables.$darkGray;
+    font-family: variables.$alataFont;
 }
 
 @include mixins.breakpoint-down(mobile){

@@ -30,6 +30,10 @@
     gap: 2rem;
 }
 
+.footer__links_item{
+    font-family: variables.$alataFont;
+}
+
 .footer__social{
     align-self: flex-end;
 }
@@ -41,6 +45,7 @@
 .footer__rights{
     font-size: 1rem;
     color: variables.$darkGray;
+    font-family: variables.$alataFont;
 }
 
 a:visited{

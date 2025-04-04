@@ -62,6 +62,7 @@
 
 .nav__item {
     position: relative;
+    font-family: variables.$alataFont;
 
 
     &::after {
@@ -162,6 +163,8 @@
         font-size: clamp(1.5rem, 5vw, 2rem);
         word-break: break-word;
         line-height: 1.2;
+        font-family: variables.$josefinFont;
+        font-weight: 100;
     }
 
     @include mixins.breakpoint-down(desktop) {

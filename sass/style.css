@@ -298,11 +298,12 @@ html, body {
   font-family: "Alata", sans-serif;
 }
 
-.onlyDesktop:hover {
-  background-color: #000;
-  color: hsl(0, 0%, 100%);
+@media (hover: hover) and (pointer: fine) {
+  .onlyDesktop:hover {
+    background-color: #000;
+    color: hsl(0, 0%, 100%);
+  }
 }
-
 .creations__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(12.5rem, 1fr));

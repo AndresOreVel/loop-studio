@@ -37,9 +37,11 @@
     font-family: variables.$alataFont;
 }
 
-.onlyDesktop:hover{
-    background-color: #000;
-    color: variables.$white;
+@media (hover: hover) and (pointer: fine){
+    .onlyDesktop:hover{
+        background-color: #000;
+        color: variables.$white;
+    }
 }
 
 .creations__grid{

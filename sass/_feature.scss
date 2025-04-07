@@ -21,7 +21,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @include mixins.breakpoint-down(mobile){
+    @include mixins.breakpoint-down(desktop){
         background-image: url(../images/mobile/image-interactive.jpg);
         width: 100%;
         min-height: auto;
@@ -55,7 +55,7 @@
     font-family: variables.$alataFont;
 }
 
-@include mixins.breakpoint-down(mobile){
+@include mixins.breakpoint-down(desktop){
 
     .feature{
         padding: 0;

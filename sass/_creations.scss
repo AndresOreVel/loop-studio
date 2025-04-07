@@ -71,7 +71,7 @@
     font-family: variables.$josefinFont;
 }
 
-@include mixins.breakpoint-down(mobile){
+@include mixins.breakpoint-down(desktop){
 
     .creations{
         padding: 0;
@@ -136,7 +136,7 @@ $images: (
     }
 }
 
-@include mixins.breakpoint-down(mobile) {
+@include mixins.breakpoint-down(desktop) {
     @each $class, $image in $images {
         .#{$class}::before {
             background-image: url(../images/mobile/#{$image});

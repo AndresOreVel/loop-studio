@@ -204,7 +204,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
 }
-@media (max-width: 25.625rem) {
+@media (max-width: 63.9375rem) {
   .feature__image {
     background-image: url(../images/mobile/image-interactive.jpg);
     width: 100%;
@@ -239,7 +239,7 @@ html, body {
   font-family: "Alata", sans-serif;
 }
 
-@media (max-width: 25.625rem) {
+@media (max-width: 63.9375rem) {
   .feature {
     padding: 0;
   }
@@ -332,7 +332,7 @@ html, body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-@media (max-width: 25.625rem) {
+@media (max-width: 63.9375rem) {
   .creations {
     padding: 0;
   }
@@ -496,7 +496,7 @@ html, body {
   filter: blur(0.75rem);
 }
 
-@media (max-width: 25.625rem) {
+@media (max-width: 63.9375rem) {
   .deep-earth::before {
     background-image: url(../images/mobile/image-deep-earth.jpg);
     transition: filter 0.3s ease;
@@ -591,7 +591,7 @@ a:visited {
   color: hsl(0, 0%, 100%);
 }
 
-@media (max-width: 25.625rem) {
+@media (max-width: 63.9375rem) {
   .footer__container {
     max-width: 40.9375rem;
     display: flex;

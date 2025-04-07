@@ -52,7 +52,7 @@ a:visited{
     color: variables.$white;
 }
 
-@include mixins.breakpoint-down(mobile){
+@include mixins.breakpoint-down(desktop){
     
     .footer__container{
         max-width: 40.9375rem;
